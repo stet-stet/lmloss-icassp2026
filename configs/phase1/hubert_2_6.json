@@ -1,0 +1,58 @@
+{
+    "input_training_h5": "hubert_cache_nonpad/LJSpeech/train.h5",
+    "input_validation_h5": "hubert_cache_nonpad/LJSpeech/val.h5",
+
+    "resblock": "1",
+    "num_gpus": 0,
+    "batch_size": 1,
+    "learning_rate": 0.0002,
+    "adam_b1": 0.8,
+    "adam_b2": 0.99,
+    "lr_decay": 0.999,
+    "seed": 1234,
+
+    "segment_size": 32000,
+    "code_hop_size": 320,
+    "multispkr": "single",
+
+    "code_quantizer":{
+        "code_vq_params": {
+            "l_bins": 64,
+            "emb_width": 128,
+            "mu": 0.99,
+            "levels": 1
+        },
+        "code_encoder_params": {
+            "input_emb_width": 768,
+            "output_emb_width": 128,
+            "levels":  1,
+            "downs_t": [1],
+            "strides_t": [2],
+            "width": 32,
+            "depth": 4,
+            "m_conv": 1.0,
+            "dilation_growth_rate": 3
+        },
+        "code_decoder_params": {
+            "input_emb_width": 768,
+            "output_emb_width": 128,
+            "levels":  1,
+            "downs_t": [1],
+            "strides_t": [2],
+            "width": 32,
+            "depth": 4,
+            "m_conv": 1.0,
+            "dilation_growth_rate": 3
+        }
+    },
+
+    "lambda_commit": 0.02,
+    "sampling_rate": 16000,
+
+    "num_workers": 8,
+
+    "dist_config": {
+        "dist_backend": "nccl",
+        "dist_url": "env://"
+    }
+}

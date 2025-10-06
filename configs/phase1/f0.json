@@ -1,0 +1,56 @@
+{
+    "resblock": "1",
+    "num_gpus": 0,
+    "batch_size": 1,
+    "learning_rate": 0.0002,
+    "adam_b1": 0.8,
+    "adam_b2": 0.99,
+    "lr_decay": 0.999,
+    "seed": 1234,
+
+    "f0_stats": "f0_stats/train.npz",
+    "f0_cache_h5_train": "f0_cache_whole/train.h5",
+    "f0_cache_h5_valid": "f0_cache_whole/val.h5",
+
+    "f0_quantizer" :{
+        "f0_vq_params": {
+            "l_bins": 32,
+            "emb_width": 128,
+            "mu": 0.99,
+            "levels": 1
+        },
+        "f0_encoder_params": {
+            "input_emb_width": 1,
+            "output_emb_width": 128,
+            "levels":  1,
+            "downs_t": [4],
+            "strides_t": [2],
+            "width": 32,
+            "depth": 4,
+            "m_conv": 1.0,
+            "dilation_growth_rate": 3
+        },
+        "f0_decoder_params": {
+            "input_emb_width": 1,
+            "output_emb_width": 128,
+            "levels":  1,
+            "downs_t": [4],
+            "strides_t": [2],
+            "width": 32,
+            "depth": 4,
+            "m_conv": 1.0,
+            "dilation_growth_rate": 3
+        }
+    },
+
+    "lambda_commit": 0.02,
+    "sampling_rate": 16000,
+
+    "num_workers": 16,
+    "accumulate_grad_batches": 8,
+
+    "dist_config": {
+        "dist_backend": "nccl",
+        "dist_url": "env://"
+    }
+}

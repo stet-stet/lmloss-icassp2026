@@ -1,0 +1,114 @@
+{
+    "f0_train_h5": "f0_cache_whole/train.h5",
+    "f0_val_h5": "f0_cache_whole/val.h5",
+    "hubert_train_h5": "hubert_cache_nonpad/LJSpeech/train.h5",
+    "hubert_val_h5": "hubert_cache_nonpad/LJSpeech/val.h5",
+
+    "textgrid_train_root": "bert_aligned/train",
+    "textgrid_val_root": "bert_aligned/val",
+
+    "f0_stats": "f0_stats/train.npz",
+
+    "resblock": "1",
+    "batch_size": 1,
+    "learning_rate": 0.0002,
+    "adam_b1": 0.8,
+    "adam_b2": 0.99,
+    "lr_decay": 0.999,
+    "seed": 1234,
+
+    "upsample_rates": [5,4,4,4,2],
+    "upsample_kernel_sizes": [11,8,8,8,4],
+    "upsample_initial_channel": 512,
+    "resblock_kernel_sizes": [3,7,11],
+    "resblock_dilation_sizes": [[1,3,5], [1,3,5], [1,3,5]],
+    "embedding_dim": 128,
+    "model_in_dim": 384,
+
+    "num_mels": 80,
+    "num_freq": 1025,
+    "n_fft": 1024,
+    "hop_size": 256,
+    "win_size": 1024,
+
+    "tta_lambda": 30.0,
+    "asr_lambda": 30.0,
+    "hubert_distill_lambda": 30.0,
+    "commit_lambda": 1.0,
+    "summarizer_path": "checkpoints/ttr/step=994000.ckpt",
+
+    "f0_quantizer_path": "checkpoints/phase1/f0_vqvae/step=251000.ckpt",
+    "f0_quantizer": {
+        "f0_vq_params": {
+            "l_bins": 32,
+            "emb_width": 128,
+            "mu": 0.99,
+            "levels": 1
+        },
+        "f0_encoder_params": {
+            "input_emb_width": 1,
+            "output_emb_width": 128,
+            "levels":  1,
+            "downs_t": [4],
+            "strides_t": [2],
+            "width": 32,
+            "depth": 4,
+            "m_conv": 1.0,
+            "dilation_growth_rate": 3
+        },
+        "f0_decoder_params": {
+            "input_emb_width": 1,
+            "output_emb_width": 128,
+            "levels":  1,
+            "downs_t": [4],
+            "strides_t": [2],
+            "width": 32,
+            "depth": 4,
+            "m_conv": 1.0,
+            "dilation_growth_rate": 3
+        }
+    },
+    "code_quantizer_path":"checkpoints/phase1/hubert_2_5/step=734000.ckpt",
+    "code_quantizer":{
+        "code_vq_params": {
+            "l_bins": 32,
+            "emb_width": 128,
+            "mu": 0.99,
+            "levels": 1
+        },
+        "code_encoder_params": {
+            "input_emb_width": 768,
+            "output_emb_width": 128,
+            "levels":  1,
+            "downs_t": [1],
+            "strides_t": [2],
+            "width": 32,
+            "depth": 4,
+            "m_conv": 1.0,
+            "dilation_growth_rate": 3
+        },
+        "code_decoder_params": {
+            "input_emb_width": 768,
+            "output_emb_width": 128,
+            "levels":  1,
+            "downs_t": [1],
+            "strides_t": [2],
+            "width": 32,
+            "depth": 4,
+            "m_conv": 1.0,
+            "dilation_growth_rate": 3
+        }
+    },
+
+    "fmin": 0,
+    "fmax": 8000,
+    "fmax_for_loss": null,
+    "sampling_rate": 16000,
+
+    "num_workers": 4,
+
+    "dist_config": {
+        "dist_backend": "nccl",
+        "dist_url": "env://"
+    }
+}

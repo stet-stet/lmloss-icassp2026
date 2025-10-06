@@ -1,0 +1,15 @@
+{
+    "wav_train_root": "data/libri_toalign/dev",
+    "textgrid_train_root": "data/libri_aligned/dev",
+    "wav_dev_root": "data/libri_toalign/dev",
+    "textgrid_dev_root": "data/libri_aligned/dev",
+
+    "batch_size": 1,
+    "learning_rate": 0.0001,
+    "adam_b1": 0.8,
+    "adam_b2": 0.99,
+    "lr_decay": 0.999,
+    "seed": 1234,
+
+    "num_workers": 4
+}

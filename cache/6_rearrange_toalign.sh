@@ -1,0 +1,1 @@
+python cache/6_rearrange_toalign.py --orig-cache-dir bert_aligned/LJSpeech --new-cache-dir bert_aligned

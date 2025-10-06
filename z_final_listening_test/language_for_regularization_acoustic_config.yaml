@@ -1,0 +1,170 @@
+
+testname: codec mushra test
+testId: codecmushra
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+pages:
+
+    - type: generic
+      id: START
+      name: 
+      content: <ul> <li>This listening test is estimated to take ~20 mins.</li> <li>Please read and follow the directions.</li></ul>
+
+    - type: volume
+      id: vol
+      name: Volume settings
+      content: Please adjust the volume!
+      stimulus: configs/resources/language_for_regularization/acoustic/wavs_16khz/LJ023-0136.wav
+      defaultVolume: 0.5
+
+    - type: generic
+      id: MUSHRA_DIRECTIONS
+      name: MUSHRA Test Directions
+      content: <ul> <li>In this listening test, you will mark <strong>10 sets of utterances</strong> </li> <li>Your task is to rate how similar the utterance is to a reference utterance on a scale from 0 to 100, where 0 means "the utterance is not similar at all" and 100 means "the utterance sounds the same". </li> <li>Use the full range of the scale and try to be consistent in your ratings. </li> <li>There are no right or wrong answers, we are interested in your honest opinion.</li></ul>
+
+    -
+        - random
+        - type: mushra
+          id: acoustic1
+          name: mushra - Random 1
+          content: Please rate how similar the utterance is to the reference. 0 is "not similar", 100 is "same".
+          stimuli:
+              C1: configs/resources/language_for_regularization/acoustic/2_5_asr_bs1/LJ023-0136.wav
+              C2: configs/resources/language_for_regularization/acoustic/2_5_ttr_bs1/LJ023-0136.wav
+              C3: configs/resources/language_for_regularization/acoustic/2_5_distill_bs1/LJ023-0136.wav
+              C4: configs/resources/language_for_regularization/acoustic/2_5_bs1/LJ023-0136.wav
+          enableLooping: true
+          createAnchor35: true
+          createAnchor70: false
+          reference: configs/resources/language_for_regularization/acoustic/wavs_16khz/LJ023-0136.wav
+        - type: mushra
+          id: acoustic2
+          name: mushra - Random 2
+          content: Please rate how similar the utterance is to the reference. 0 is "not similar", 100 is "same".
+          stimuli:
+              C1: configs/resources/language_for_regularization/acoustic/2_5_asr_bs1/LJ022-0165.wav
+              C2: configs/resources/language_for_regularization/acoustic/2_5_ttr_bs1/LJ022-0165.wav
+              C3: configs/resources/language_for_regularization/acoustic/2_5_distill_bs1/LJ022-0165.wav
+              C4: configs/resources/language_for_regularization/acoustic/2_5_bs1/LJ022-0165.wav
+          enableLooping: true
+          createAnchor35: true
+          createAnchor70: false
+          reference: configs/resources/language_for_regularization/acoustic/wavs_16khz/LJ022-0165.wav
+        - type: mushra
+          id: acoustic3
+          name: mushra - Random 3
+          content: Please rate how similar the utterance is to the reference. 0 is "not similar", 100 is "same".
+          stimuli:
+              C1: configs/resources/language_for_regularization/acoustic/2_5_asr_bs1/LJ021-0083.wav
+              C2: configs/resources/language_for_regularization/acoustic/2_5_ttr_bs1/LJ021-0083.wav
+              C3: configs/resources/language_for_regularization/acoustic/2_5_distill_bs1/LJ021-0083.wav
+              C4: configs/resources/language_for_regularization/acoustic/2_5_bs1/LJ021-0083.wav
+          enableLooping: true
+          createAnchor35: true
+          createAnchor70: false
+          reference: configs/resources/language_for_regularization/acoustic/wavs_16khz/LJ021-0083.wav
+        - type: mushra
+          id: acoustic4
+          name: mushra - Random 4
+          content: Please rate how similar the utterance is to the reference. 0 is "not similar", 100 is "same".
+          stimuli:
+              C1: configs/resources/language_for_regularization/acoustic/2_5_asr_bs1/LJ023-0040.wav
+              C2: configs/resources/language_for_regularization/acoustic/2_5_ttr_bs1/LJ023-0040.wav
+              C3: configs/resources/language_for_regularization/acoustic/2_5_distill_bs1/LJ023-0040.wav
+              C4: configs/resources/language_for_regularization/acoustic/2_5_bs1/LJ023-0040.wav
+          enableLooping: true
+          createAnchor35: true
+          createAnchor70: false
+          reference: configs/resources/language_for_regularization/acoustic/wavs_16khz/LJ023-0040.wav
+        - type: mushra
+          id: acoustic5
+          name: mushra - Random 5
+          content: Please rate how similar the utterance is to the reference. 0 is "not similar", 100 is "same".
+          stimuli:
+              C1: configs/resources/language_for_regularization/acoustic/2_5_asr_bs1/LJ021-0091.wav
+              C2: configs/resources/language_for_regularization/acoustic/2_5_ttr_bs1/LJ021-0091.wav
+              C3: configs/resources/language_for_regularization/acoustic/2_5_distill_bs1/LJ021-0091.wav
+              C4: configs/resources/language_for_regularization/acoustic/2_5_bs1/LJ021-0091.wav
+          enableLooping: true
+          createAnchor35: true
+          createAnchor70: false
+          reference: configs/resources/language_for_regularization/acoustic/wavs_16khz/LJ021-0091.wav
+        - type: mushra
+          id: acoustic6
+          name: mushra - Random 6
+          content: Please rate how similar the utterance is to the reference. 0 is "not similar", 100 is "same".
+          stimuli:
+              C1: configs/resources/language_for_regularization/acoustic/2_5_asr_bs1/LJ021-0009.wav
+              C2: configs/resources/language_for_regularization/acoustic/2_5_ttr_bs1/LJ021-0009.wav
+              C3: configs/resources/language_for_regularization/acoustic/2_5_distill_bs1/LJ021-0009.wav
+              C4: configs/resources/language_for_regularization/acoustic/2_5_bs1/LJ021-0009.wav
+          enableLooping: true
+          createAnchor35: true
+          createAnchor70: false
+          reference: configs/resources/language_for_regularization/acoustic/wavs_16khz/LJ021-0009.wav
+        - type: mushra
+          id: acoustic7
+          name: mushra - Random 7
+          content: Please rate how similar the utterance is to the reference. 0 is "not similar", 100 is "same".
+          stimuli:
+              C1: configs/resources/language_for_regularization/acoustic/2_5_asr_bs1/LJ022-0138.wav
+              C2: configs/resources/language_for_regularization/acoustic/2_5_ttr_bs1/LJ022-0138.wav
+              C3: configs/resources/language_for_regularization/acoustic/2_5_distill_bs1/LJ022-0138.wav
+              C4: configs/resources/language_for_regularization/acoustic/2_5_bs1/LJ022-0138.wav
+          enableLooping: true
+          createAnchor35: true
+          createAnchor70: false
+          reference: configs/resources/language_for_regularization/acoustic/wavs_16khz/LJ022-0138.wav
+        - type: mushra
+          id: acoustic8
+          name: mushra - Random 8
+          content: Please rate how similar the utterance is to the reference. 0 is "not similar", 100 is "same".
+          stimuli:
+              C1: configs/resources/language_for_regularization/acoustic/2_5_asr_bs1/LJ022-0129.wav
+              C2: configs/resources/language_for_regularization/acoustic/2_5_ttr_bs1/LJ022-0129.wav
+              C3: configs/resources/language_for_regularization/acoustic/2_5_distill_bs1/LJ022-0129.wav
+              C4: configs/resources/language_for_regularization/acoustic/2_5_bs1/LJ022-0129.wav
+          enableLooping: true
+          createAnchor35: true
+          createAnchor70: false
+          reference: configs/resources/language_for_regularization/acoustic/wavs_16khz/LJ022-0129.wav
+        - type: mushra
+          id: acoustic9
+          name: mushra - Random 9
+          content: Please rate how similar the utterance is to the reference. 0 is "not similar", 100 is "same".
+          stimuli:
+              C1: configs/resources/language_for_regularization/acoustic/2_5_asr_bs1/LJ022-0082.wav
+              C2: configs/resources/language_for_regularization/acoustic/2_5_ttr_bs1/LJ022-0082.wav
+              C3: configs/resources/language_for_regularization/acoustic/2_5_distill_bs1/LJ022-0082.wav
+              C4: configs/resources/language_for_regularization/acoustic/2_5_bs1/LJ022-0082.wav
+          enableLooping: true
+          createAnchor35: true
+          createAnchor70: false
+          reference: configs/resources/language_for_regularization/acoustic/wavs_16khz/LJ022-0082.wav
+        - type: mushra
+          id: acoustic10
+          name: mushra - Random 10
+          content: Please rate how similar the utterance is to the reference. 0 is "not similar", 100 is "same".
+          stimuli:
+              C1: configs/resources/language_for_regularization/acoustic/2_5_asr_bs1/LJ022-0188.wav
+              C2: configs/resources/language_for_regularization/acoustic/2_5_ttr_bs1/LJ022-0188.wav
+              C3: configs/resources/language_for_regularization/acoustic/2_5_distill_bs1/LJ022-0188.wav
+              C4: configs/resources/language_for_regularization/acoustic/2_5_bs1/LJ022-0188.wav
+          enableLooping: true
+          createAnchor35: true
+          createAnchor70: false
+          reference: configs/resources/language_for_regularization/acoustic/wavs_16khz/LJ022-0188.wav
+
+
+    - type: finish
+      name: Thank you
+      content: If you were told to input a code, please input it below. Otherwise, you can just input anything and finish the test.
+      showResults: true
+      writeResults: true
+      questionnaire:
+          - type: text
+            label: code
+            name: code

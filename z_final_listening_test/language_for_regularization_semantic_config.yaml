@@ -1,0 +1,745 @@
+
+testname: semantic test
+testId: semantic
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+pages:
+
+    - type: generic
+      id: START
+      name: 
+      content: <ul> <li>A <strong>semantic</strong> listening test will be administered. This is estimated to take ~10 mins for those with a good grasp of English.</li> <li>Please read and follow the directions.</li></ul>
+
+    - type: volume
+      id: vol
+      name: Volume settings
+      content: Please adjust the volume!
+      stimulus: configs/resources/language_for_regularization/acoustic/wavs_16khz/LJ021-0034.wav
+      defaultVolume: 0.5
+
+    - type: generic
+      id: SEMANTIC_DIRECTIONS
+      name: Semantic Test Directions
+      content: <ul> <li>In this listening test, you will mark <strong>15 sets of utterances</strong> </li> <li>Your task is to rate how well the utterance matches the transcription, where 1 means "the utterance does not match the text at all" and 7 means "the utterance perfectly matches the text". </li> <li>Please consider only how well the utterance <strong>matches the text</strong>, and ignore any other aspects of the utterance such as audio quality or speaker characteristics. </li> <li>Use the full range of the scale and try to be consistent in your ratings. </li> <li>There are no right or wrong answers, we are interested in your honest opinion.</li></ul>
+
+    -
+        - random
+        - type: likert_multi_stimulus
+          id: semantic1
+          name: Semantic - Random 1
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>The number of justices has been changed several times before,</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ024-0048.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ024-0048.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ024-0048.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ024-0048.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ024-0048.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+        - type: likert_multi_stimulus
+          id: semantic2
+          name: Semantic - Random 2
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>In many states judges must retire at the age of seventy.</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ023-0136.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ023-0136.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ023-0136.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ023-0136.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ023-0136.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+        - type: likert_multi_stimulus
+          id: semantic3
+          name: Semantic - Random 3
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>Even more significantly it has given the country as a whole an uneasy apprehension of overconcentrated economic power.</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ022-0161.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ022-0161.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ022-0161.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ022-0161.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ022-0161.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+        - type: likert_multi_stimulus
+          id: semantic4
+          name: Semantic - Random 4
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>President Wilson, three; President Harding, four, including a Chief Justice; President Coolidge, one;</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ024-0063.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ024-0063.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ024-0063.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ024-0063.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ024-0063.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+        - type: likert_multi_stimulus
+          id: semantic5
+          name: Semantic - Random 5
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>Those who have intimated that the President of the United States is trying to drive that team</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ023-0049.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ023-0049.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ023-0049.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ023-0049.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ023-0049.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+        - type: likert_multi_stimulus
+          id: semantic6
+          name: Semantic - Random 6
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>judges who will retain in the courts the judicial functions of a court,</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ023-0133.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ023-0133.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ023-0133.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ023-0133.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ023-0133.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+        - type: likert_multi_stimulus
+          id: semantic7
+          name: Semantic - Random 7
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>We were then in the midst of the great banking crisis.</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ023-0008.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ023-0008.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ023-0008.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ023-0008.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ023-0008.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+        - type: likert_multi_stimulus
+          id: semantic8
+          name: Semantic - Random 8
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>It was in this spirit thus described by Secretary Root</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ021-0028.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ021-0028.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ021-0028.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ021-0028.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ021-0028.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+        - type: likert_multi_stimulus
+          id: semantic9
+          name: Semantic - Random 9
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>an overwhelming majority of them voted a mandate that the Congress and the President begin the task of providing that protection</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ023-0036.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ023-0036.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ023-0036.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ023-0036.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ023-0036.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+        - type: likert_multi_stimulus
+          id: semantic10
+          name: Semantic - Random 10
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>Is it not a fact that relations between capital and labor on the basis of collective bargaining are much further advanced in Great Britain</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ021-0185.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ021-0185.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ021-0185.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ021-0185.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ021-0185.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+        - type: likert_multi_stimulus
+          id: semantic11
+          name: Semantic - Random 11
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>than in the United States?</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ021-0186.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ021-0186.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ021-0186.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ021-0186.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ021-0186.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+        - type: likert_multi_stimulus
+          id: semantic12
+          name: Semantic - Random 12
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>In this we have had assistance from many bankers and businessmen,</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ021-0042.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ021-0042.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ021-0042.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ021-0042.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ021-0042.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+        - type: likert_multi_stimulus
+          id: semantic13
+          name: Semantic - Random 13
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>For the many messages which have come to me after that speech, and which it is physically impossible to answer individually,</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ023-0004.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ023-0004.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ023-0004.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ023-0004.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ023-0004.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+        - type: likert_multi_stimulus
+          id: semantic14
+          name: Semantic - Random 14
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>We have passed through more than a year of education.</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ021-0136.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ021-0136.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ021-0136.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ021-0136.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ021-0136.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+        - type: likert_multi_stimulus
+          id: semantic15
+          name: Semantic - Random 15
+          content: Please rate how well each utterance matches this text: <br><br> "<strong>seems necessary to produce the same result of justice and right conduct</strong>"
+          stimuli:
+              ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ021-0026.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ021-0026.wav
+              C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ021-0026.wav
+              C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ021-0026.wav
+              C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ021-0026.wav
+          mustRate: true
+          response:
+              - value: 1
+                label: no matching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 2
+                label: many unmatching words
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 3
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 4
+                label: some phonemes gone/flipped
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 5
+                label: ...
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 6
+                label: matches, but strange pronunciations here and there
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+              - value: 7
+                label: Perfectly matches the text
+                img: configs/resources/images/star_off.png
+                imgSelected: configs/resources/images/star_on.png
+                imgHigherResponseSelected: configs/resources/images/star_on.png
+
+
+    - type: finish
+      name: Thank you
+      content: If you were told to input a code, please input it below. Otherwise, you can just finish the test.
+      showResults: true
+      writeResults: true
+      questionnaire:
+          - type: text
+            label: code
+            name: code

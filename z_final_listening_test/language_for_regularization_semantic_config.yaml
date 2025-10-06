@@ -33,7 +33,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>The number of justices has been changed several times before,</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ024-0048.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ024-0048.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ024-0048.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ024-0048.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ024-0048.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ024-0048.wav
@@ -80,7 +80,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>In many states judges must retire at the age of seventy.</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ023-0136.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ023-0136.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ023-0136.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ023-0136.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ023-0136.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ023-0136.wav
@@ -127,7 +127,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>Even more significantly it has given the country as a whole an uneasy apprehension of overconcentrated economic power.</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ022-0161.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ022-0161.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ022-0161.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ022-0161.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ022-0161.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ022-0161.wav
@@ -174,7 +174,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>President Wilson, three; President Harding, four, including a Chief Justice; President Coolidge, one;</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ024-0063.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ024-0063.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ024-0063.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ024-0063.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ024-0063.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ024-0063.wav
@@ -221,7 +221,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>Those who have intimated that the President of the United States is trying to drive that team</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ023-0049.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ023-0049.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ023-0049.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ023-0049.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ023-0049.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ023-0049.wav
@@ -268,7 +268,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>judges who will retain in the courts the judicial functions of a court,</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ023-0133.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ023-0133.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ023-0133.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ023-0133.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ023-0133.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ023-0133.wav
@@ -315,7 +315,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>We were then in the midst of the great banking crisis.</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ023-0008.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ023-0008.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ023-0008.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ023-0008.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ023-0008.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ023-0008.wav
@@ -362,7 +362,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>It was in this spirit thus described by Secretary Root</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ021-0028.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ021-0028.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ021-0028.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ021-0028.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ021-0028.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ021-0028.wav
@@ -409,7 +409,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>an overwhelming majority of them voted a mandate that the Congress and the President begin the task of providing that protection</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ023-0036.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ023-0036.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ023-0036.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ023-0036.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ023-0036.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ023-0036.wav
@@ -456,7 +456,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>Is it not a fact that relations between capital and labor on the basis of collective bargaining are much further advanced in Great Britain</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ021-0185.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ021-0185.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ021-0185.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ021-0185.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ021-0185.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ021-0185.wav
@@ -503,7 +503,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>than in the United States?</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ021-0186.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ021-0186.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ021-0186.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ021-0186.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ021-0186.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ021-0186.wav
@@ -550,7 +550,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>In this we have had assistance from many bankers and businessmen,</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ021-0042.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ021-0042.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ021-0042.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ021-0042.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ021-0042.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ021-0042.wav
@@ -597,7 +597,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>For the many messages which have come to me after that speech, and which it is physically impossible to answer individually,</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ023-0004.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ023-0004.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ023-0004.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ023-0004.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ023-0004.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ023-0004.wav
@@ -644,7 +644,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>We have passed through more than a year of education.</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ021-0136.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ021-0136.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ021-0136.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ021-0136.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ021-0136.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ021-0136.wav
@@ -691,7 +691,7 @@ pages:
           content: Please rate how well each utterance matches this text: <br><br> "<strong>seems necessary to produce the same result of justice and right conduct</strong>"
           stimuli:
               ref: configs/resources/language_for_regularization/semantic/wavs_16khz/LJ021-0026.wav
-              C1: configs/resources/language_for_regularization/semantic/2_5_asrbs1/LJ021-0026.wav
+              C1: configs/resources/language_for_regularization/semantic/2_5_asr_bs1/LJ021-0026.wav
               C2: configs/resources/language_for_regularization/semantic/2_5_ttr_bs1/LJ021-0026.wav
               C3: configs/resources/language_for_regularization/semantic/2_5_distill_bs1/LJ021-0026.wav
               C4: configs/resources/language_for_regularization/semantic/2_5_bs1/LJ021-0026.wav

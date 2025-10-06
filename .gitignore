@@ -1,0 +1,16 @@
+bert_aligned/
+bert_toalign/
+cache/hubert_base_ls960.pt
+checkpoints/
+data/
+f0_cache_whole/
+hubert_cache_nonpad/
+inferred/
+local_preprocessed_data/
+local_preprocessed_data_40/
+manifests_nonpad/
+rawtext/
+transcribed/
+transcribed_alter/
+_splitmaker.sh
+__pycache__/

@@ -4,7 +4,7 @@ This repository complements the paper submitted to *ICASSP 2026*.
 
 * For the listening samples and MUSHRA test configs we used, see `z_final_listening_test`.
 * For replication of training etc., follow the steps below.
-* To test inference, follow preprocessing steps below, download the checkpoints folder [(link, still finding a good place to upload)](https://google.com) and place the whole thing in `checkpoints`, check that `checkpoints/phase3/decoder_2_5_ttr_bs1/step=692000div2_isbest.ckpt` exists.
+* To test inference, follow preprocessing steps below, download the checkpoints folder [(link)](https://drive.google.com/file/d/1N5VuWm3gR-G9MOjVXIu1exvnyPv-hZxa/view?usp=sharing) and place the whole thing in `checkpoints`, check that `checkpoints/phase3/decoder_2_5_ttr_bs1/step=692000div2_isbest.ckpt` exists.
 
 ## Preprocessing Dataset
 

@@ -1,6 +1,6 @@
 # From Hallucination to Articulation: Language Model-Driven Losses for Ultra Low-Bitrate Neural Speech Coding
 
-This repository complements the paper submitted to *ICASSP 2026*.
+This repository complements the paper accepted to *ICASSP 2026*. (arxiv TBD) 
 
 * For the listening samples and MUSHRA test configs we used, see `z_final_listening_test`.
 * For replication of training etc., follow the steps below.

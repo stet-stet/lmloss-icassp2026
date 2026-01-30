@@ -167,4 +167,16 @@ python -m src.listening_test.confmaker_acoustic
 python -m src.listening_test.confmaker_semantic
 ```
 
+## Citation
+
+If you find this work helpful, please cite:
+```
+@inproceedings{yi2026lmloss,
+   title      = {From Hallucination to Articulation: Language Model-Driven Losses for Ultra Low-Bitrate Neural Speech Coding},
+   author     = {Jayeon Yi and Minje Kim},
+   booktitle  = {Proceedings of the IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)},
+   year       = {2026},
+}
+```
+
 
